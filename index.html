@@ -56,21 +56,21 @@
 </form>
 <script>
     getElementById("collectdata").adddEventListener(submit, function(e)
-    {e.preEventDefault().
+    {e.preEventDefault();
 
 
         const data = {
-            fname:fname.value,
-            lname:lname.value,
-            email:email.value,
-            subject:subject.value,
-            comments:comments.value
+            fname:getElementById.("fname").value,
+            lname:getElementById("lname").value,
+            email:getElementById("email").value,
+            subject:getElementById("subject").value,
+            comments:getElementById("comments").value
             
 
 
         };
 
-        localStorage.setItem( "index.html", JSON.stringify(data));
+        localStorage.setItem( "formData", JSON.stringify(data));
         window.location.href = "datatables/data.html";
 
     }
