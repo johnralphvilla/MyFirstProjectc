@@ -1,4 +1,10 @@
+body{
+    background:linear-gradient(to top, green , yellow);
+    color: blue;
+
+
+}
 header {
     background-color: aqua;
-
+    text-align: center;
 }
