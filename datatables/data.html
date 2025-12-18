@@ -1,4 +1,4 @@
-<table border="1">
+<table border="1" id="reset">
     <thead> 
          <tr>   
         <th>First Name</th>
@@ -14,7 +14,7 @@
     </thead>
     <tbody id="tableBody"></tbody>
 </table>
-
+<button id="resetBtn">Table Resst</button>
 <script>
 const allData = JSON.parse(localStorage.getItem("allFormData")) || [];
 
