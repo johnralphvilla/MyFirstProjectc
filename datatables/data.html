@@ -1,0 +1,14 @@
+<table border="1">
+    <tr><th>Field</th><th>Value</th></tr>
+</table>
+
+<script>
+const data = JSON.parse(localStorage.getItem("formData"));
+const table = document.querySelector("table");
+
+for (let key in data) {
+    let row = table.insertRow();
+    row.insertCell(0).textContent = key;
+    row.insertCell(1).textContent = data[key];
+}
+</script>
