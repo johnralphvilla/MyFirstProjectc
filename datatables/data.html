@@ -15,19 +15,22 @@
 </table>
 
 <script>
-const data = JSON.parse(localStorage.getItem("formData"));
+const allData = JSON.parse(localStorage.getItem("allFormData")) || [];
 
-if (data) {
+const tableBody = document.getElementById("tableBody");
+
+allData.forEach(data => {
     const row = `
         <tr>
             <td>${data.fname}</td>
             <td>${data.lname}</td>
             <td>${data.email}</td>
-            <td>${data.subjects}</td>
+            <td>${data.subject}</td>
             <td>${data.comments}</td>
         </tr>
     `;
-    document.getElementById("tableBody").innerHTML = row;
-}
+    tableBody.innerHTML += row; // append each row
+});
 </script>
+
 
