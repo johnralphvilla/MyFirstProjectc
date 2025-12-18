@@ -117,3 +117,44 @@ main {
 
 
 
+.slider {
+    position: relative;
+    width: 260px; /* must match your slide width */
+    margin: 30px auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 260px; /* match slider width */
+    text-align: center;
+}
+
+.slide img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Navigation buttons */
+.nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: purple;
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 8px 12px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev { left: 0; }
+.next { right: 0; }
+
+.nav:hover { background: violet; }
