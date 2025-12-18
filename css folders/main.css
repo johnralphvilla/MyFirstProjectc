@@ -72,77 +72,48 @@ main {
     padding-bottom: 40px;
 }
 
-/* ===== SECTIONS ===== */
-main section h2 {
-    scroll-margin-top: 270px;
-    color: aquamarine;
-    background-color: purple;
-    display: inline-block;
-    margin-bottom: 15px;
-    padding: 5px 10px;
+.slider {
+    position: relative;
+    width: 260px;
+    margin: 30px auto;
+    overflow: hidden;
 }
 
-main > section h2 + p {
-    text-decoration: underline blue;
-    background-color: aqua;
-    padding: 10px;
-}
-
-/* ===== LIST STYLING ===== */
-main ul li:nth-child(odd) {
-    background-color: greenyellow;
-}
-
-/* ===== BUTTON ===== */
-.apply-button {
-    background-color: yellow;
-    color: blueviolet;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-}
-
-.apply-button:hover {
-    background-color: green;
-}
-
-/* ===== GALLERY ===== */
-.gallery {
+.slides {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
+    transition: transform 0.5s ease;
 }
 
-figure {
+.slide {
+    min-width: 260px;
     text-align: center;
 }
 
-figure img {
+.slide img {
     width: 250px;
     height: 250px;
     object-fit: cover;
 }
 
-/* ===== CAMPUS BOX ===== */
-.Campus {
-    text-align: center;
-    border: 2px double red;
-    width: 810px;
-    margin: 20px auto;
+/* Navigation buttons */
+.nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: purple;
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 8px 12px;
+    cursor: pointer;
 }
 
-/* ===== BORDER UTILITY ===== */
-.border {
-    border: 5px solid aqua;
-    width: 50%;
-    margin: 20px auto;
+.prev { left: 0; }
+.next { right: 0; }
+
+.nav:hover {
+    background: violet;
 }
 
-/* ===== FOOTER ===== */
-footer {
-    text-align: center;
-    font-size: 16px;
-    color: blue;
-    padding: 20px;
-}
+
+
