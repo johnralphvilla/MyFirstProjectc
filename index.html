@@ -17,17 +17,48 @@
         <h1> My First Project </h1>
         <h2> Created By Ralph Villa</h2>
     </header>
-<form >
-<p> For booking appointment</p> 
-<br>
-<lablel for="name">Enter Your Name</lablel>
-<input type="text" id="name"  placeholder="Your Name">
-<br>
-<label for="email"> Enter your email</label>
-<input type="text" id="email" placeholder="Your email" >
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 8 Comp1234  Week 10 </title>
+    <meta  name="author" content="John Ralph Villa ">
+    <meta  name="description" content="This is is Forms for Name, Email and A comment box">
+</head>
+<body>
+<form method="get" action="">
+    <fieldset>
+        <legend>Comment Form (<span>requires*</span>)</legend>
+        <p style="margin:0;"> Your Name:</p>
+        <label for="fname" ><span>*</span></label>
+        <input type="text" id="fname" name="fname" placeholder="First name" required>
+        <label for="lname"><span>*</span></label>
+        <input type="text" id="lname" name="lname" placeholder="Last name"><br><br>
+        <p style="margin:0;">Your Email:</p>
+        <label for="email"><span>*</span></label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label> Subjec of comments </label>
+        <br>
+        <select name="Subject" id="subjects">
+            <option value="0"> please Select One</option>
+            <option value="a">a</option>
+            <option value="b" >b</option>
+            <option value="c">c</option>
+        </select>
+        <br>
+
+        <label for="comments">Comments </label><br>
+        <textarea id="comments" name="comments" rows="10" cols="100"> </textarea>
+        <br><br>
+        <button style="color: #021eb3" type="submit">Submit</button>
+
+    </fieldset>
 
 </form>
+<script src=https://my.gblearn.com/js/loadscript.js></script>
+</body>
+</html>
 
 
 
