@@ -122,3 +122,12 @@ footer{
     font-size: 16px;
     color: Blue;
 }
+.gallery {
+    display: flex;
+    gap: 20px;          /* space between figures */
+    justify-content: center; /* center them horizontally */
+}
+
+figure {
+    text-align: center;
+}
