@@ -1,23 +1,124 @@
-*{
-    margin:0;
-}
 body{
-    background:linear-gradient(45deg, green , yellow);
-   
+    margin:0;
+    font-family:Verdana;
+    background: linear-gradient(to bottom,rgba(232, 15, 232, 0.62),rgba(232, 15, 232, 0.5)),
+    url("../img/tclogo.png") ;
+    background-size: cover;
 
 
 }
 header {
-    background-color: aqua;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+
+    background: linear-gradient(to top, pink, red);
+    padding: 10px;
+    box-shadow: 0 4px 8px 12px rgba(230, 7, 7, 0.71), 0 6px 20px 0 rgb(89, 2, 2);
+    border: 5px solid green;
+}
+header h1 {
+    text-shadow: 5px 5px 5px aqua;
+    color: aliceblue;
+    font-size: 30px;
+}
+.img{
+    float:right;
+    height : 100px;
+    width : 100px;
+    margin-right: 40px;
+}
+header nav ul {
+    list-style: none;
+    display: inline-block;
+}
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+header nav ul li a {
+    color:purple;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+
+
+}
+header nav ul li a:hover {
+    text-decoration: underline blueviolet;
+}
+header::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+a[href^="#"]{
+    color: aliceblue;
+    background-color: purple;
+}
+a[href^="../"]{
+    color: purple;
+    background-color:GReen;
+
+}
+a[href^="assets"]{
+    color:yellow;
+    background-color:GReen;
+}
+/* this the top of my main + sections  */
+
+main {
+    margin:5px 0 0 0;
+    padding: 350px;
+    width: 100%;
+
+
+
+}
+main ul li:nth-child(odd) {
+    background-color: greenyellow;
+}
+
+.Campus{
     text-align: center;
-    position:fixed;
-    top:10px;
+    border:2px double Red;
+    width: 810px;
+}
+/* this section is to adjust the the display position what show up below the fixed header */
+
+main section h2 {
+    scroll-margin-top: 250px;
+    color:aquamarine;
+    background-color:Purple;
+    display: inline;
+    margin-bottom: 15px;
+}
+
+main > section h2+ p{
+    text-decoration: blue underline;
+    background-color: aqua;
+}
+
+.apply-button{
+    background-color: yellow;
+    color: blueviolet;
 
 }
-form{
-    border: 2px solid black;
+.apply-button:hover{
+    background-color: green;
 }
+main section h4 {
+    margin-bottom: -200px; /* margin for the lower apply button*/
 
-.float{
-    float: left;
+}
+.border{
+    border: 5px solid aqua;
+    width: 50%;
+}
+/*footer */
+footer{
+    text-align: center;
+    font-size: 16px;
+    color: Blue;
 }
