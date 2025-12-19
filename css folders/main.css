@@ -197,6 +197,7 @@ fieldset{
     border:2px solid red;
     margin: 20px 0 20px 0;
     box-sizing: border-box;
+    display: inline-block;
 }
 .box3{
     border:2px solid pink;
