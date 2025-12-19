@@ -1,175 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>My First Project</title>
     <link rel="stylesheet" href="css folders/main.css">
 </head>
-<body>
-<header>
-<h1>Care Salon</h1>
-<h2>Created By Ralph Villa</h2>
 
-         <nav>
+<body>
+    <header>
+        <h1>Care Salon</h1>
+        <h2>Created By Ralph Villa</h2>
+
+        <nav>
             <ul>
-                <li> <a href="datatables/data.html">Check for Weekly Availabilty  Appoinments </a></li>
+                <li> <a href="datatables/data.html">Check for Weekly Availabilty Appoinments </a></li>
             </ul>
         </nav>
-</header>
+    </header>
 
-<main>
-<script>
-const sliders = {
-    men: { index: 0 },
-    women: { index: 0 }
-};
+    <main>
+        <div>
+            <script>
+                const sliders = {
+                    men: { index: 0 },
+                    women: { index: 0 }
+                };
 
-function showSlide(type) {
-    const slider = document.querySelector(`[data-slider="${type}"]`);
-    const slides = slider.querySelector('.slides');
-    const totalSlides = slider.querySelectorAll('.slide').length;
+                function showSlide(type) {
+                    const slider = document.querySelector(`[data-slider="${type}"]`);
+                    const slides = slider.querySelector('.slides');
+                    const totalSlides = slider.querySelectorAll('.slide').length;
 
-    // Ensure index wraps around
-    if (sliders[type].index >= totalSlides) sliders[type].index = 0;
-    if (sliders[type].index < 0) sliders[type].index = totalSlides - 1;
+                    // Ensure index wraps around
+                    if (sliders[type].index >= totalSlides) sliders[type].index = 0;
+                    if (sliders[type].index < 0) sliders[type].index = totalSlides - 1;
 
-    slides.style.transform = `translateX(-${sliders[type].index * 260}px)`;
-}
+                    slides.style.transform = `translateX(-${sliders[type].index * 260}px)`;
+                }
 
-function nextSlide(type) {
-    sliders[type].index++;
-    showSlide(type);
-}
+                function nextSlide(type) {
+                    sliders[type].index++;
+                    showSlide(type);
+                }
 
-function prevSlide(type) {
-    sliders[type].index--;
-    showSlide(type);
-}
+                function prevSlide(type) {
+                    sliders[type].index--;
+                    showSlide(type);
+                }
 
-// Optional: initialize sliders (in case you want to show the first slide explicitly)
-showSlide('men');
-showSlide('women');
-</script>
+                // Optional: initialize sliders (in case you want to show the first slide explicitly)
+                showSlide('men');
+                showSlide('women');
+            </script>
 
 
 
-<section class="box">
-     <h2>Men Hair Styles</h2>        
-   
-    <div class="slider" data-slider="men" class="box">
-        <button class="nav prev" onclick="prevSlide('men')">&#10094;</button>
-         
-        <div class="slides" >
-            
-            <figure class="slide">
-                <img src="img/malehaircuts/mhair.jpg" alt="Men Hair 1" width="250px" height="250">
-            </figure>
-            <figure class="slide">
-                <img src="img/malehaircuts/R.jpg" alt="Men Hair 2 " width="250px" height="250px">
-            </figure>
-            <figure class="slide">
-                <img src="img/mhair3.jpg" alt="Men Hair 3">
-            </figure>
+            <section class="box">
+                <h2>Men Hair Styles</h2>
+
+                <div class="slider" data-slider="men" class="box">
+                    <button class="nav prev" onclick="prevSlide('men')">&#10094;</button>
+
+                    <div class="slides">
+
+                        <figure class="slide">
+                            <img src="img/malehaircuts/mhair.jpg" alt="Men Hair 1" width="250px" height="250">
+                        </figure>
+                        <figure class="slide">
+                            <img src="img/malehaircuts/R.jpg" alt="Men Hair 2 " width="250px" height="250px">
+                        </figure>
+                        <figure class="slide">
+                            <img src="img/mhair3.jpg" alt="Men Hair 3">
+                        </figure>
+                    </div>
+
+                    <button class="nav next" onclick="nextSlide('men')">&#10095;</button>
+                </div>
+            </section>
+            <section class="box">
+                <h2>Women Hair Styles</h2>
+                <div class="slider" data-slider="women">
+                    <button class="nav prev" onclick="prevSlide('women')">&#10094;</button>
+
+                    <div class="slides">
+                        <figure class="slide">
+                            <img src="img/femalestyle/fhair.jpg" alt="Women Hair 1">
+                        </figure>
+                        <figure class="slide">
+                            <img src="img/fhair2.jpg" alt="Women Hair 2">
+                        </figure>
+                        <figure class="slide">
+                            <img src="img/fhair3.jpg" alt="Women Hair 3">
+                        </figure>
+                    </div>
+
+                    <button class="nav next" onclick="nextSlide('women')">&#10095;</button>
+                </div>
+
+            </section>
         </div>
+        <div>
+            <form id="collectdata">
+                <fieldset>
+                    <legend>Comment Form (<span>requires*</span>)</legend>
+                    <p>Your Name:</p>
+                    <input type="text" id="fname" name="fname" placeholder="First name" required>
+                    <input type="text" id="lname" name="lname" placeholder="Last name" required><br><br>
 
-        <button class="nav next" onclick="nextSlide('men')">&#10095;</button>
-    </div>
-</section>
-<section class="box">
-    <h2>Women Hair Styles</h2>
-    <div class="slider" data-slider="women" >
-        <button class="nav prev" onclick="prevSlide('women')">&#10094;</button>
-      
-        <div class="slides">
-            <figure class="slide">
-                <img src="img/femalestyle/fhair.jpg" alt="Women Hair 1">
-            </figure>
-            <figure class="slide">
-                <img src="img/fhair2.jpg" alt="Women Hair 2">
-            </figure>
-            <figure class="slide">
-                <img src="img/fhair3.jpg" alt="Women Hair 3">
-            </figure>
+                    <p>Your Email:</p>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <lable> Time for Appomients 8:00 am - 8: 00 pm</lable>
+                    <select id="time" required>
+                        <option value="">Minimum 2hour</option>
+                        <option value="8am-10am"> 8am-10am</option>
+                        <option value="10am-12pm">10am-12pm</option>
+                        <option value="12-2pm">not available</option>
+                        <option value="2pm-4pm">2pm-4pm</option>
+                        <option value="4pm-6m ">4pm-6m</option>
+                        <option value="6pm-8pm ">6pm-8pm</option>
+                        <option value="contact">Contact us for private service</option>
+
+
+
+                    </select>
+                    <br><br>
+
+
+                    <label>Reason for Appoiments</label>
+                    <select id="subjects" required>
+                        <option value="">Please Select One</option>
+                        <option value="Nail">Nail </option>
+                        <option value="Hair">Hair </option>
+                        <option value="Hair&Nail">Hair&Nail</option>
+                    </select><br><br>
+
+                    <label for="comments">Comments</label><br>
+                    <textarea id="comments" rows="5" cols="50"></textarea><br><br>
+
+                    <button type="submit">Submit</button>
+                </fieldset>
+            </form>
+
+            <script>
+                document.getElementById("collectdata").addEventListener("submit", function (e) {
+                    e.preventDefault();
+
+                    // Get existing data array from localStorage or create new
+                    let allData = JSON.parse(localStorage.getItem("allFormData")) || [];
+
+                    // Collect form data
+                    const data = {
+                        fname: document.getElementById("fname").value,
+                        lname: document.getElementById("lname").value,
+                        email: document.getElementById("email").value,
+                        time: document.getElementById("time").value,
+                        subjects: document.getElementById("subjects").value,
+                        comments: document.getElementById("comments").value
+                    };
+
+                    // Add new data to array
+                    allData.push(data);
+
+                    // Save updated array
+                    localStorage.setItem("allFormData", JSON.stringify(allData));
+
+                    // Redirect to table page
+                    window.location.href = "datatables/data.html";
+                });
+            </script>
         </div>
-
-        <button class="nav next" onclick="nextSlide('women')">&#10095;</button>
-    </div>
-
-</section>
-<div>
-    <form id="collectdata">
-        <fieldset>
-            <legend>Comment Form (<span>requires*</span>)</legend>
-            <p>Your Name:</p>
-            <input type="text" id="fname" name="fname" placeholder="First name" required>
-            <input type="text" id="lname" name="lname" placeholder="Last name" required><br><br>
-
-            <p>Your Email:</p>
-            <input type="email" id="email" name="email" required><br><br>
-
-            <lable> Time for Appomients 8:00 am - 8: 00 pm</lable>
-            <select id="time" required>
-            <option value="">Minimum 2hour</option>
-            <option value="8am-10am"> 8am-10am</option>
-            <option value="10am-12pm">10am-12pm</option>
-            <option value="12-2pm">not available</option>
-            <option value="2pm-4pm">2pm-4pm</option>
-            <option value="4pm-6m ">4pm-6m</option>
-            <option value="6pm-8pm ">6pm-8pm</option>
-            <option value="contact">Contact us for private service</option>
-            
-            
-
-        </select>
-        <br><br>
-
-
-        <label>Reason for Appoiments</label>
-        <select id="subjects" required>
-            <option value="" >Please Select One</option>
-            <option value="Nail">Nail </option>
-            <option value="Hair">Hair </option>
-            <option value="Hair&Nail">Hair&Nail</option>
-        </select><br><br>
-        
-        <label for="comments">Comments</label><br>
-        <textarea id="comments" rows="5" cols="50"></textarea><br><br>
-
-        <button type="submit">Submit</button>
-    </fieldset>
-</form>
-
-<script>
-document.getElementById("collectdata").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    // Get existing data array from localStorage or create new
-    let allData = JSON.parse(localStorage.getItem("allFormData")) || [];
-
-    // Collect form data
-    const data = {
-        fname: document.getElementById("fname").value,
-        lname: document.getElementById("lname").value,
-        email: document.getElementById("email").value,
-        time: document.getElementById("time").value,
-        subjects: document.getElementById("subjects").value,
-        comments: document.getElementById("comments").value
-    };
-
-    // Add new data to array
-    allData.push(data);
-
-    // Save updated array
-    localStorage.setItem("allFormData", JSON.stringify(allData));
-
-    // Redirect to table page
-    window.location.href = "datatables/data.html";
-});
-</script>
-</div>
-</main>
+    </main>
 
 
 
 </body>
+
 </html>
