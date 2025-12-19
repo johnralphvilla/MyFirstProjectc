@@ -160,7 +160,7 @@ main {
 .nav:hover { background: violet; }
 
 
-main + section + div {
+.box {
     float: inline-start;
     border: 2px solid black;
 
