@@ -193,14 +193,11 @@ fieldset{
     display: inline-block;
 }
 .box3{
-    float: center;
-     border: 2px solid black;
-    padding: 0 ;
-    margin:auto;
-    height: 450px ;
-    width: 450px;
-    text-align: center;
-
+    border:2px solid pink;
+    border-radius: 15px;
+    float: left;
+    margin: 10px 100px 10px 100px;
+    padding:10px;
 
 
 }
