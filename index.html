@@ -120,9 +120,12 @@
                         const slider =querySelector(`[data.slider="${type}"] `);
                         const slides= querySelector(`.slides`);
                         const totalSlides = slider.querySelectorAll(`.slide`).length;
+                        if(slider[type].index >= totalSlides) slider[type].index=0;
+                        if(slider[type].idex < 0) slider[type].index= totalSlides-1;
+                        slides.style.transform=`translateX= (-${sliders[type].index * 260}px)`;
 
-                        
                     }
+                    
 
 
 
