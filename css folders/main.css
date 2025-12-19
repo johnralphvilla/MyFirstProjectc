@@ -193,4 +193,7 @@ form{
     background: linear-gradient( 80deg, blue, green);
 
 }
+fieldset{
+    border:circle red;
+}
 
